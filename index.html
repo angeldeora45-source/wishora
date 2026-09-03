@@ -1,10 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Wishor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishor — We sell feelings.</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<h1>Wishor is back! 🎉</h1>
-<p>Website is being updated...</p>
+
+  <!-- PAGE 1 -->
+  <section class="page active" id="page0">
+    <div class="container fade-in">
+      <div class="logo">Wishor</div>
+
+      <h1>Some lessons<br>stay forever.</h1>
+
+      <p class="subtitle">
+        Create a little memory for the teacher<br>
+        who made a difference in your life.
+      </p>
+
+      <div class="card">
+        <input
+          type="text"
+          id="teacherName"
+          placeholder="Teacher's name"
+          oninput="updateText()"
+        >
+
+        <input
+          type="text"
+          id="studentName"
+          placeholder="Your name"
+          oninput="updateText()"
+        >
+
+        <label class="photo-label">
+          📷 Add your teacher's photo
+          <input
+            type="file"
+            accept="image/*"
+            onchange="handlePhoto(event)"
+          >
+        </label>
+
+        <textarea
+          id="personalMessage"
+          placeholder="Write something from your heart..."
+          oninput="updateText()"
+        ></textarea>
+
+        <button onclick="startExperience()">
+          Create the memory →
+        </button>
+      </div>
+
+      <div class="watermark">Preview • Wishor</div>
+    </div>
+  </section>
+
+
+  <!-- PAGE 2 -->
+  <section class="page" id="page1">
+    <div class="container fade-in">
+
+      <div class="logo">A little letter</div>
+
+      <img
+        class="teacher-photo"
+        src=""
+        alt="Teacher"
+        onerror="this.style.display='none'"
+      >
+
+      <h2>Dear <span class="teacher-name">Your Teacher</span>,</h2>
+
+      <p class="quote">
+        “A good teacher teaches lessons.<br>
+        A great teacher leaves a mark.”
+      </p>
+
+      <p class="personal-message">
+        Thank you for everything you have taught me.
+      </p>
+
+      <div class="signature">
+        With gratitude,<br>
+        <span class="student-name">Your Name</span>
+      </div>
+
+      <br>
+
+      <button onclick="goNext(2)">
+        Continue →
+      </button>
+
+      <div class="watermark">Preview • Wishor</div>
+    </div>
+  </section>
+
+
+  <!-- PAGE 3 -->
+  <section class="page" id="page2">
+    <div class="container fade-in">
+
+      <div class="logo">The little things</div>
+
+      <h1>What you taught me<br>beyond books.</h1>
+
+      <div class="card">
+
+        <p class="quote">
+          Patience.<br>
+          Confidence.<br>
+          Kindness.<br>
+          And the courage to keep trying.
+        </p>
+
+        <p class="personal-message">
+          Your words, your guidance and even the small moments
+          in class will always be a part of my memories.
+        </p>
+
+      </div>
+
+      <br>
+
+      <button onclick="goNext(3)">
+        One last thing →
+      </button>
+
+      <div class="watermark">Preview • Wishor</div>
+    </div>
+  </section>
+
+
+  <!-- PAGE 4 -->
+  <section class="page" id="page3">
+    <div class="container fade-in">
+
+      <div class="logo">For someone special</div>
+
+      <h1>
+        Thank you,<br>
+        <span class="teacher-name">Your Teacher</span>.
+      </h1>
+
+      <p class="subtitle">
+        Some memories deserve to stay a little longer.
+      </p>
+
+      <div class="card">
+
+        <p class="personal-message">
+          Thank you for being more than just a teacher.
+          Thank you for being a part of my journey.
+        </p>
+
+        <div class="price">₹49</div>
+
+        <p class="subtitle">
+          Unlock this personalized memory
+        </p>
+
+        <button onclick="buyNow()">
+          Unlock for ₹49 ❤️
+        </button>
+
+      </div>
+
+      <p class="subtitle" style="font-size:12px; margin-top:25px;">
+        Made with feelings by Wishor.
+      </p>
+
+      <div class="watermark">Preview • Wishor</div>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>
