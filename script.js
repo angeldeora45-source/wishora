@@ -128,4 +128,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
   createPetals();
-});
+});let musicPlaying = false;
+let music = new Audio("music.mp3");
+
+music.loop = true;
+music.volume = 0.35;
+
+function toggleMusic() {
+  const button = document.getElementById("musicBtn");
+
+  if (!musicPlaying) {
+    music.play();
+    musicPlaying = true;
+    button.textContent = "🎵 Music On";
+  } else {
+    music.pause();
+    musicPlaying = false;
+    button.textContent = "🎵 Music Off";
+  }
+}
