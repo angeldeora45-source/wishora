@@ -108,4 +108,24 @@ function buyNow() {
 
 document.addEventListener("DOMContentLoaded", function() {
   loadDetails();
+});function createPetals() {
+  const symbols = ["✦", "✧", "·", "❀"];
+
+  for (let i = 0; i < 12; i++) {
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+    petal.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    petal.style.left = Math.random() * 100 + "%";
+    petal.style.animationDelay = Math.random() * 7 + "s";
+    petal.style.fontSize = 10 + Math.random() * 10 + "px";
+
+    document.body.appendChild(petal);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  createPetals();
 });
