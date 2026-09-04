@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishora | Teacher's Day</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Wishora 🌸</div>
+    <a href="create.html" class="nav-btn">Create Greeting</a>
+  </header>
+
+  <main class="hero">
+
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">✨</div>
+    <div class="flower flower3">🌷</div>
+
+    <div class="hero-card">
+
+      <span class="small-text">A little thank you can mean so much...</span>
+
+      <h1>
+        Happy<br>
+        <span>Teacher's Day</span> 💐
+      </h1>
+
+      <p>
+        Create a beautiful, heartfelt greeting for the teacher
+        who made a difference in your life.
+      </p>
+
+      <a href="create.html" class="main-btn">
+        Create Your Greeting ✨
+      </a>
+
+      <div class="price">
+        Special greetings from <strong>₹49</strong>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    Made with ♡ by Wishora
+  </footer>
+
+</body>
+</html>
