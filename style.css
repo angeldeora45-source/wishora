@@ -284,4 +284,56 @@ form button {
   .preview-buttons .main-btn {
     width: 100%;
   }
+}.premium-home-link {
+  display: block;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #9b78ad;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.premium-home-link:hover {
+  text-decoration: underline;
+}
+
+.premium-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.premium-card {
+  max-width: 650px;
+}
+
+.premium-price {
+  font-size: 52px;
+  font-weight: bold;
+  color: #d889aa;
+  margin: 15px 0;
+}
+
+.features {
+  display: grid;
+  gap: 10px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.features div {
+  background: #fff8fc;
+  padding: 13px 16px;
+  border-radius: 15px;
+  border: 1px solid #f0dce8;
+}
+
+.secure-text {
+  font-size: 12px !important;
+  margin-top: 15px !important;
+  color: #999 !important;
+}
+
+.premium-btn {
+  border: none;
+  cursor: pointer;
 }
