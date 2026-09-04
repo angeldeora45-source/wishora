@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Greeting | Wishora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Wishora 🌸</div>
+  <a href="create.html" class="nav-btn">Edit</a>
+</header>
+
+<main class="hero">
+
+  <div class="hero-card greeting-card">
+
+    <span class="small-text">
+      A little message from the heart 💌
+    </span>
+
+    <h1>
+      Happy <span>Teacher's Day</span> 🌸
+    </h1>
+
+    <div id="photoContainer"></div>
+
+    <h2 id="teacherDisplay"></h2>
+
+    <p id="messageDisplay"></p>
+
+    <p class="from">
+      With gratitude,<br>
+      <strong id="studentDisplay"></strong>
+    </p>
+
+    <div class="preview-buttons">
+
+      <button class="main-btn" onclick="window.print()">
+        Save Greeting 📥
+      </button>
+
+      <button class="main-btn share-btn" onclick="shareGreeting()">
+        Share 💌
+      </button>
+
+      <a href="premium.html" class="main-btn premium-link">
+        Make It Premium ✨ ₹49
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  Made with ♡ by Wishora
+</footer>
+
+<script>
+
+const teacher =
+  localStorage.getItem("teacherName") ||
+  "Amazing Teacher";
+
+const student =
+  localStorage.getItem("studentName") ||
+  "Your Student";
+
+const feeling =
+  localStorage.getItem("feeling") ||
+  "Thankful";
+
+const language =
+  localStorage.getItem("language") ||
+  "English";
+
+const photo =
+  localStorage.getItem("wishoraPhoto");
+
+
+const englishMessages = {
+
+  Thankful:
+    "Thank you for your patience, guidance and for always believing in your students. Your lessons will stay with me far beyond the classroom.",
+
+  Emotional:
+    "Some teachers teach lessons, but some leave a beautiful mark on our hearts. Thank you for being one of those special teachers.",
+
+  Respectful:
+    "Your dedication, wisdom and kindness inspire us every day. It is a privilege to learn from a teacher like you.",
+
+  Inspirational:
+    "You don't just teach subjects—you inspire us to believe in ourselves and become better every day. Thank you for inspiring us.",
+
+  Friendly:
+    "Thank you for making learning more enjoyable and for always being there to guide and encourage us. Happy Teacher's Day!",
+
+  Funny:
+    "Thank you for surviving our questions, our excuses and our endless doubts! You truly deserve a Teacher's Day celebration!"
+};
+
+
+const hindiMessages = {
+
+  Thankful:
+    "आपके धैर्य, मार्गदर्शन और हमेशा हम पर विश्वास करने के लिए दिल से धन्यवाद। आपकी सिखाई बातें हमेशा हमारे साथ रहेंगी।",
+
+  Emotional:
+    "कुछ शिक्षक सिर्फ पढ़ाते नहीं हैं, बल्कि हमारे दिल में एक खूबसूरत जगह बना लेते हैं। ऐसे ही खास शिक्षक होने के लिए धन्यवाद।",
+
+  Respectful:
+    "आपकी मेहनत, ज्ञान और दयालुता हमें हर दिन प्रेरित करती है। आपसे सीखना हमारे लिए सौभाग्य की बात है।",
+
+  Inspirational:
+    "आप हमें सिर्फ विषय नहीं पढ़ाते, बल्कि खुद पर विश्वास करना और हर दिन बेहतर बनना भी सिखाते हैं।",
+
+  Friendly:
+    "सीखने को इतना मजेदार बनाने और हमेशा हमारा मार्गदर्शन करने के लिए धन्यवाद। आपको शिक्षक दिवस की हार्दिक शुभकामनाएँ!",
+
+  Funny:
+    "हमारे सवालों, बहानों और endless doubts को सहने के लिए धन्यवाद! आप सच में Teacher's Day celebration deserve करते हैं!"
+};
+
+
+const messages =
+  language === "Hindi"
+    ? hindiMessages
+    : englishMessages;
+
+
+document.getElementById("teacherDisplay").textContent =
+  "Dear " + teacher + ",";
+
+document.getElementById("studentDisplay").textContent =
+  student;
+
+document.getElementById("messageDisplay").textContent =
+  messages[feeling] || messages.Thankful;
+
+
+if (photo) {
+
+  const img = document.createElement("img");
+
+  img.src = photo;
+  img.alt = "Greeting photo";
+  img.className = "teacher-photo";
+
+  document
+    .getElementById("photoContainer")
+    .appendChild(img);
+
+}
+
+
+function shareGreeting() {
+
+  const text =
+    "Happy Teacher's Day, " +
+    teacher +
+    "! A special greeting from " +
+    student +
+    " made with Wishora 🌸";
+
+  if (navigator.share) {
+
+    navigator.share({
+      title: "Happy Teacher's Day",
+      text: text
+    });
+
+  } else {
+
+    navigator.clipboard.writeText(text);
+
+    alert(
+      "Greeting text copied! 💌"
+    );
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
