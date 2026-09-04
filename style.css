@@ -207,4 +207,81 @@ form button {
   cursor: pointer;
   font-size: 16px;
   margin-top: 5px;
+}.greeting-card {
+  max-width: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.greeting-card::before {
+  content: "🌸";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+.greeting-card::after {
+  content: "✨";
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+.greeting-card h2 {
+  color: #80658e;
+  margin: 18px 0 10px;
+  font-size: 25px;
+}
+
+.teacher-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffc8dd;
+  margin: 25px auto 10px;
+  display: block;
+  box-shadow: 0 8px 25px rgba(155, 120, 173, 0.2);
+}
+
+#from {
+  color: #80658e;
+}
+
+.from {
+  margin-top: 25px;
+  line-height: 1.7;
+  color: #8b7a8f;
+}
+
+.preview-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.share-btn {
+  background: #bde0c4;
+}
+
+@media (max-width: 600px) {
+
+  .greeting-card {
+    width: 100%;
+  }
+
+  .teacher-photo {
+    width: 125px;
+    height: 125px;
+  }
+
+  .preview-buttons .main-btn {
+    width: 100%;
+  }
 }
