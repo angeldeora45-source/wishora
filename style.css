@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff8fc;
+  color: #4a4a4a;
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #9b78ad;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #4a4a4a;
+  background: #ffc8dd;
+  padding: 11px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card {
+  max-width: 650px;
+  text-align: center;
+  padding: 55px 30px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  box-shadow: 0 15px 45px rgba(155, 120, 173, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.small-text {
+  font-size: 14px;
+  color: #8b7a8f;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 1.1;
+  margin: 20px 0;
+  color: #80658e;
+}
+
+h1 span {
+  color: #d889aa;
+}
+
+.hero-card p {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.main-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #4a4a4a;
+  background: #cdb4db;
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+}
+
+.price {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #8b7a8f;
+}
+
+.price strong {
+  color: #c56f98;
+}
+
+.flower {
+  position: absolute;
+  font-size: 35px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.flower1 {
+  top: 15%;
+  left: 10%;
+}
+
+.flower2 {
+  top: 25%;
+  right: 12%;
+}
+
+.flower3 {
+  bottom: 15%;
+  left: 15%;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #9a899d;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-btn {
+    padding: 9px 13px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .hero-card {
+    padding: 45px 20px;
+  }
+
+  .hero-card p {
+    font-size: 15px;
+  }
+}
